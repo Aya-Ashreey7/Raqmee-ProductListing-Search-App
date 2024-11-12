@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import ProductsPage from '@/components/ProductsPage.vue';
 
 
@@ -15,7 +15,8 @@ const routes = [
 
 // Create the router instance
 const router = createRouter({
-    history: createWebHistory(),  // This uses HTML5 history mode
+    mode: 'hash',
+    history: createWebHashHistory(),  // This uses HTML5 history mode
     routes
 });
 
